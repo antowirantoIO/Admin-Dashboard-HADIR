@@ -43,7 +43,7 @@ const Dashboard = (props) => {
     <React.Fragment>
 
       <MetaTags>
-        <title>Dashboard | Lexa - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Dashboard | HADIR </title>
       </MetaTags>
 
       {/*mimi widgets */}

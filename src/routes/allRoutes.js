@@ -91,6 +91,9 @@ import PagesBlank from "../pages/Extra Pages/pages-blank";
 import Pages404 from "../pages/Extra Pages/pages-404";
 import Pages500 from "../pages/Extra Pages/pages-500";
 
+import ManagementGuru from "../pages/Management/Guru/index";
+
+
 const userRoutes = [
   { path: "/dashboard", component: Dashboard },
 
@@ -166,6 +169,9 @@ const userRoutes = [
   { path: "/pages-invoice", component: PagesInvoice },
   { path: "/pages-directory", component: PagesDirectory },
   { path: "/pages-blank", component: PagesBlank },
+
+  // MANAGEMENT DATA
+  { path: "/management/guru", component: ManagementGuru },
 
   // this route should be at the end of all other routes
   { path: "/", exact: true, component: () => <Redirect to="/dashboard" /> },
