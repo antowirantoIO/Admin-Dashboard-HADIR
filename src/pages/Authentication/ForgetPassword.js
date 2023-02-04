@@ -17,7 +17,7 @@ import { userForgetPassword } from "../../store/actions"
 import logoLightPng from "../../assets/images/logo-light.png"
 import logoDark from "../../assets/images/logo-dark.png"
 
-const ForgetPasswordPage = props => {
+const ForgetPassword = props => {
   function handleValidSubmit(event, values) {
     props.userForgetPassword(values, props.history)
   }
@@ -25,7 +25,7 @@ const ForgetPasswordPage = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Forget Password | Lexa - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Forget Password | HADIR </title>
       </MetaTags>
       <div className="account-pages my-5 pt-sm-5">
         <Container>
@@ -90,9 +90,6 @@ const ForgetPasswordPage = props => {
                     Sign In Here
                   </Link>{" "}
                 </p>
-                <p>
-                  © {new Date().getFullYear()} Lexa <span className="d-none d-sm-inline-block"> - Crafted with <i className="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
-                </p>
               </div>
             </Col>
           </Row>
@@ -102,7 +99,7 @@ const ForgetPasswordPage = props => {
   )
 }
 
-ForgetPasswordPage.propTypes = {
+ForgetPassword.propTypes = {
   forgetError: PropTypes.any,
   forgetSuccessMsg: PropTypes.any,
   history: PropTypes.object,
@@ -115,5 +112,5 @@ const mapStatetoProps = state => {
 }
 
 export default withRouter(
-  connect(mapStatetoProps, { userForgetPassword })(ForgetPasswordPage)
+  connect(mapStatetoProps, { userForgetPassword })(ForgetPassword)
 )

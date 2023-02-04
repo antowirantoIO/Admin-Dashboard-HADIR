@@ -4,77 +4,70 @@ const m = date.getMonth();
 const y = date.getFullYear();
 
 var events = [{
-  title: 'All Day Event',
+  title: 'Gelar P5 Kelas 11',
   start: new Date(y, m, 1),
   className : 'text-white'
 },
 {
-  title: 'Long Event',
+  title: 'Mars BNN',
   start: new Date(y, m, d - 5),
   end: new Date(y, m, d - 2),
   className: 'bg-warning text-white'
 },
 {
   id: 999,
-  title: 'Repeating Event',
+  title: 'Isra Miraj',
   start: new Date(y, m, d - 3, 16, 0),
   allDay: false,
   className: 'bg-info text-white'
 },
 {
   id: 999,
-  title: 'Repeating Event',
+  title: 'Video Perpisahan Kelas 12',
   start: new Date(y, m, d + 4, 16, 0),
   allDay: false,
   className: 'bg-primary text-white'
 },
 {
-  title: 'Meeting',
+  title: 'Syuting Video',
   start: new Date(y, m, d, 10, 30),
   allDay: false,
   className: 'bg-success text-white'
 },
 {
-  title: 'Lunch',
+  title: 'Uji Kompetensi Kelas 12',
   start: new Date(y, m, d, 12, 0),
   end: new Date(y, m, d, 14, 0),
   allDay: false,
   className: 'bg-danger text-white'
 },
 {
-  title: 'Birthday Party',
+  title: 'Penilaian Kinerja Guru',
   start: new Date(y, m, d + 1, 19, 0),
   end: new Date(y, m, d + 1, 22, 30),
   allDay: false,
   className: 'bg-success text-white'
-},
-{
-  title: 'Click for Google',
-  start: new Date(y, m, 28),
-  end: new Date(y, m, 29),
-  url: 'http://google.com/',
-  className: 'bg-dark text-white'
 }];
 
 const calenderDefaultCategories = [
   {
     id: 1,
-    title: "New Event Planning",
+    title: "Event Siswa",
     type: "bg-success",
   },
   {
     id: 2,
-    title: "Meeting",
+    title: "Event Guru",
     type: "bg-info",
   },
   {
     id: 3,
-    title: "Generating Reports",
+    title: "Event Sekolah",
     type: "bg-warning",
   },
   {
     id: 4,
-    title: "Create New theme",
+    title: "Event Jurusan",
     type: "bg-danger",
   },
 ]

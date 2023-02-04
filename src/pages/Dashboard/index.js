@@ -24,7 +24,7 @@ import { setBreadcrumbItems } from "../../store/actions";
 const Dashboard = (props) => {
 
   const breadcrumbItems = [
-    { title: "Lexa", link: "#" },
+    { title: "HADIR", link: "#" },
     { title: "Dashboard", link: "#" }
   ]
 
@@ -33,10 +33,10 @@ const Dashboard = (props) => {
   },)
 
   const reports = [
-    { title: "Orders", iconClass: "cube-outline", total: "1,587", average: "+11%", badgecolor: "info" },
-    { title: "Revenue", iconClass: "buffer", total: "$46,782", average: "-29%", badgecolor: "danger" },
-    { title: "Average Price", iconClass: "tag-text-outline", total: "$15.9", average: "0%", badgecolor: "warning" },
-    { title: "Product Sold", iconClass: "briefcase-check", total: "1890", average: "+89%", badgecolor: "info" },
+    { title: "Hadir", iconClass: "cube-outline", total: "1,587", average: "+11%", badgecolor: "info" },
+    { title: "Sakit", iconClass: "buffer", total: "$46,782", average: "-29%", badgecolor: "danger" },
+    { title: "Izin", iconClass: "tag-text-outline", total: "$15.9", average: "0%", badgecolor: "warning" },
+    { title: "No Info", iconClass: "briefcase-check", total: "1890", average: "+89%", badgecolor: "info" },
   ]
 
   return (
@@ -69,19 +69,19 @@ const Dashboard = (props) => {
 
         <Col xl="4" lg="6">
           {/* inbox */}
-          <Inbox />
+          {/* <Inbox /> */}
         </Col>
         <Col xl="4" lg="6">
           {/* recent activity */}
-          <RecentActivity />
+          {/* <RecentActivity /> */}
 
         </Col>
         <Col xl="4">
           {/* widget user */}
-          <WidgetUser />
+          {/* <WidgetUser /> */}
 
           {/* yearly sales */}
-          <YearlySales />
+          {/* <YearlySales /> */}
         </Col>
       </Row>
 

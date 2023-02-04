@@ -29,7 +29,7 @@ class LatestOrders extends Component {
             <React.Fragment>
                 <Card>
                     <div className="card-body">
-                        <h4 className="card-title mb-4">Latest Orders</h4>
+                        <h4 className="card-title mb-4">Status Absensi Siswa</h4>
 
                         <div className="table-responsive">
                             <Table className="align-middle table-centered table-vertical table-nowrap mb-1">

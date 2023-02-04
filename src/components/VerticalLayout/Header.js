@@ -10,7 +10,6 @@ import { Link } from "react-router-dom"
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from "reactstrap"
 
 // Import menuDropdown
-import LanguageDropdown from "../CommonForBoth/TopbarDropdown/LanguageDropdown"
 import NotificationDropdown from "../CommonForBoth/TopbarDropdown/NotificationDropdown"
 import ProfileMenu from "../CommonForBoth/TopbarDropdown/ProfileMenu"
 
@@ -102,33 +101,6 @@ const Header = props => {
             >
               <i className="mdi mdi-menu"></i>
             </button>
-            <div className="d-none d-sm-block">
-              <Dropdown
-                isOpen={createmenu}
-                toggle={() => setCreateMenu(!createmenu)}
-                className="d-inline-block"
-              >
-
-                <div className="dropdown dropdown-topbar pt-3 mt-1 d-inline-block">
-
-                  <DropdownToggle
-                    className="btn btn-light"
-                    tag="button"
-                  >
-                    Create <i className="mdi mdi-chevron-down"></i>
-                  </DropdownToggle>
-
-                  <DropdownMenu className="dropdown-menu-end">
-                    <DropdownItem tag="a" href="#">Action</DropdownItem>
-                    <DropdownItem tag="a" href="#">Another action</DropdownItem>
-                    <DropdownItem tag="a" href="#">Something else here</DropdownItem>
-                    <div className="dropdown-divider"></div>
-                    <DropdownItem tag="a" href="#">Separated link</DropdownItem>
-                  </DropdownMenu>
-
-                </div>
-              </Dropdown>
-            </div>
           </div>
           <div className="d-flex">
             <form className="app-search d-none d-lg-block">
@@ -179,7 +151,6 @@ const Header = props => {
                 </form>
               </div>
             </div>
-            <LanguageDropdown />
             <div className="dropdown d-none d-lg-inline-block">
               <button
                 type="button"

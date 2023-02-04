@@ -27,7 +27,7 @@ const Login = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Login | Lexa - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Login | HADIR </title>
       </MetaTags>
       <div className="account-pages my-5 pt-sm-5">
         <Container>
@@ -37,13 +37,14 @@ const Login = props => {
                 <CardBody className="pt-0">
                   <h3 className="text-center mt-5 mb-4">
                     <Link to="/" className="d-block auth-logo">
-                      <img src={logoDark} alt="" height="30" className="auth-logo-dark" />
-                      <img src={logoLightPng} alt="" height="30" className="auth-logo-light" />
+                      {/* <img src={logoDark} alt="" height="30" className="auth-logo-dark" />
+                      <img src={logoLightPng} alt="" height="30" className="auth-logo-light" /> */}
+                      <h1>HADIR</h1>
                     </Link>
                   </h3>
                   <div className="p-3">
-                    <h4 className="text-muted font-size-18 mb-1 text-center">Welcome Back !</h4>
-                    <p className="text-muted text-center">Sign in to continue to Lexa.</p>
+                    <h4 className="text-muted font-size-18 mb-1 text-center">Selamat Datang Kembali !</h4>
+                    <p className="text-muted text-center">Login Untuk Terus Masuk Ke HADIR.</p>
                     <AvForm
                       className="form-horizontal mt-4"
                       onValidSubmit={(e, v) => {
@@ -60,7 +61,7 @@ const Login = props => {
                           label="Email"
                           value="admin@themesbrand.com"
                           className="form-control"
-                          placeholder="Enter email"
+                          placeholder="Masukan Email Anda"
                           type="email"
                           required
                         />
@@ -73,7 +74,7 @@ const Login = props => {
                           value="123456"
                           type="password"
                           required
-                          placeholder="Enter Password"
+                          placeholder="Masukan Password Anda"
                         />
                       </div>
 
@@ -89,7 +90,7 @@ const Login = props => {
                               className="form-check-label"
                               htmlFor="customControlInline"
                             >
-                              Remember me
+                              Ingat Saya
                             </label>
                           </div>
                         </div>
@@ -99,7 +100,7 @@ const Login = props => {
                       </div>
                       <div className="form-group mb-0 row">
                         <div className="col-12 mt-4">
-                          <Link to="/forgot-password" className="text-muted"><i className="mdi mdi-lock"></i> Forgot your password?</Link>
+                          <Link to="/forgot-password" className="text-muted"><i className="mdi mdi-lock"></i> Lupa Password Anda?</Link>
                         </div>
                       </div>
 
@@ -109,18 +110,16 @@ const Login = props => {
               </Card>
               <div className="mt-5 text-center">
                 <p>
-                  Don&#39;t have an account ?{" "}
+                  {/* Don&#39;t have an account ?{" "} */}
+                  Belum Mempunyai Akun ?{" "}
+                  
                   <Link
                     to="register"
                     className="text-primary"
                   >
                     {" "}
-                    Signup now{" "}
+                    Regitrasi Sekarang!!{" "}
                   </Link>{" "}
-                </p>
-                <p>
-                  © {new Date().getFullYear()} Lexa 
-                  <span className="d-none d-sm-inline-block"> - Crafted with <i className="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
                 </p>
               </div>
             </Col>

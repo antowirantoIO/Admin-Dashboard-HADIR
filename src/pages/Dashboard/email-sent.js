@@ -29,7 +29,7 @@ class MonthlyEarnings extends Component {
                     },
                 },
                 xaxis: {
-                    categories: ['2011', '2012', '2013' , '2014', '2015', '2016', '2017'],
+                    categories: ['Senin', 'Selasa', 'Rabu' , 'Kamis', 'Jumat', 'Sabtu', 'Minggu'],
                     axisBorder: {
                         show: !1
                     },
@@ -62,20 +62,20 @@ class MonthlyEarnings extends Component {
             <React.Fragment>
                 <Card>
                     <CardBody>
-                        <h4 className="card-title mb-4">Email Sent</h4>
+                        <h4 className="card-title mb-4">Statistik Absensi</h4>
 
                         <Row className="text-center mt-4">
                             <Col xs="4">
                                 <h5 className="font-size-20">$ 89425</h5>
-                                <p className="text-muted">Marketplace</p>
+                                <p className="text-muted">Guru</p>
                             </Col>
                             <Col xs="4">
                                 <h5 className="font-size-20">$ 56210</h5>
-                                <p className="text-muted">Total Income</p>
+                                <p className="text-muted">Siswa</p>
                             </Col>
                             <Col xs="4">
                                 <h5 className="font-size-20">$ 8974</h5>
-                                <p className="text-muted">Last Month</p>
+                                <p className="text-muted">Pegawai</p>
                             </Col>
                         </Row>
 

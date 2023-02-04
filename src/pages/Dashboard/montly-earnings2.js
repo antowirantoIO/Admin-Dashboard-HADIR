@@ -82,7 +82,7 @@ class MonthlyEarnings extends Component {
             <React.Fragment>
                 <Card>
                     <CardBody>
-                        <h4 className="card-title mb-4">Monthly Earnings</h4>
+                        <h4 className="card-title mb-4">Chart Kelas dan Program</h4>
 
                         <Row className="text-center mt-4">
                             <Col xs="6">

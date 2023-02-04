@@ -27,7 +27,7 @@ class LatestTransactions extends Component {
             <React.Fragment>
                 <Card>
                     <CardBody>
-                        <h4 className="card-title mb-4">Latest Transactions</h4>
+                        <h4 className="card-title mb-4">Status Absensi Guru</h4>
 
                         <div className="table-responsive">
                             <Table className="align-middle table-centered table-vertical table-nowrap">

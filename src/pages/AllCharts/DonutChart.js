@@ -8,9 +8,9 @@ class DonutChart extends Component {
     render() {
         const data = {
             columns: [
-                ['Download Sales', 12],
-                ['In-Store Sales', 30],
-                ['Mail-Order Sales', 20]
+                ['Siswa', 30],
+                ['Pegawai', 12],
+                ['Guru', 20]
             ],
             type: "donut",
         };

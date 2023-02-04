@@ -30,7 +30,7 @@ const Register = props => {
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Register | Lexa - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Register | HADIR </title>
       </MetaTags>
 
       <div className="account-pages my-5 pt-sm-5">
@@ -41,13 +41,14 @@ const Register = props => {
                 <CardBody className="pt-0">
                   <h3 className="text-center mt-5 mb-4">
                     <Link to="/" className="d-block auth-logo">
-                      <img src={logoDark} alt="" height="30" className="auth-logo-dark" />
-                      <img src={logoLightPng} alt="" height="30" className="auth-logo-light" />
+                      {/* <img src={logoDark} alt="" height="30" className="auth-logo-dark" />
+                      <img src={logoLightPng} alt="" height="30" className="auth-logo-light" /> */}
+                          <h2>HADIR</h2>
                     </Link>
                   </h3>
                   <div className="p-3">
-                    <h4 className="text-muted font-size-18 mb-1 text-center">Free Register</h4>
-                    <p className="text-muted text-center">Get your free Lexa account now.</p>
+                    <h4 className="text-muted font-size-18 mb-1 text-center">Regitrasi Akun Secara Gratis</h4>
+                    <p className="text-muted text-center">Dapatkan Akun HADIR Mu Sendiri</p>
                     <AvForm
                       className="form-horizontal mt-4"
                       onValidSubmit={(e, v) => {
@@ -73,7 +74,7 @@ const Register = props => {
                           name="email"
                           label="Email"
                           className="form-control"
-                          placeholder="Enter email"
+                          placeholder="Masukan Email Anda"
                           type="email"
                           required
                         />
@@ -85,7 +86,7 @@ const Register = props => {
                           label="Username"
                           type="text"
                           required
-                          placeholder="Enter username"
+                          placeholder="Masukan Username Anda"
                         />
                       </div>
                       <div className="mb-3">
@@ -94,19 +95,19 @@ const Register = props => {
                           label="Password"
                           type="password"
                           required
-                          placeholder="Enter Password"
+                          placeholder="Masukan Password Anda"
                         />
                       </div>
 
                       <div className="mb-3 row mt-4">
                         <div className="col-12 text-end">
-                          <button className="btn btn-primary w-md waves-effect waves-light" type="submit">Register</button>
+                          <button className="btn btn-primary w-md waves-effect waves-light" type="submit">Registrasi</button>
                         </div>
                       </div>
 
                       <div className="mb-0 row">
                         <div className="col-12 mt-4">
-                          <p className="text-muted mb-0 font-size-14">By registering you agree to the Lexa <Link to="#" className="text-primary">Terms of Use</Link></p>
+                          <p className="text-muted mb-0 font-size-14">Dengan Registrasi Anda Menyetujui <Link to="#" className="text-primary">Ketentuan Penggunaan</Link></p>
                         </div>
                       </div>
                     </AvForm>
@@ -115,14 +116,11 @@ const Register = props => {
               </Card>
               <div className="mt-5 text-center">
                 <p>
-                  Already have an account ?{" "}
+                  Sudah Mempunyai Akun ?{" "}
                   <Link to="/login" className="text-primary">
                     {" "}
                     Login
                   </Link>{" "}
-                </p>
-                <p>
-                  © {new Date().getFullYear()} Lexa <span className="d-none d-sm-inline-block"> - Crafted with <i className="mdi mdi-heart text-danger"></i> by Themesbrand.</span>
                 </p>
               </div>
             </Col>

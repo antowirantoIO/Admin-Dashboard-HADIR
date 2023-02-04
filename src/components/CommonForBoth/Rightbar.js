@@ -48,39 +48,6 @@ const RightSidebar = props => {
 
             <div className="p-4">
               <div className="radio-toolbar">
-                <span className="mb-2 d-block">Layouts</span>
-                <input
-                  type="radio"
-                  id="radioVertical"
-                  name="radioFruit"
-                  value="vertical"
-                  checked={props.layoutType === "vertical"}
-                  onChange={e => {
-                    if (e.target.checked) {
-                      props.changeLayout(e.target.value)
-                    }
-                  }}
-                />
-                <label htmlFor="radioVertical">Vertical</label>
-                {"   "}
-                <input
-                  type="radio"
-                  id="radioHorizontal"
-                  name="radioFruit"
-                  value="horizontal"
-                  checked={props.layoutType === "horizontal"}
-                  onChange={e => {
-                    if (e.target.checked) {
-                      props.changeLayout(e.target.value)
-                    }
-                  }}
-                />
-                <label htmlFor="radioHorizontal">Horizontal</label>
-              </div>
-
-              <hr className="mt-1" />
-
-              <div className="radio-toolbar">
                 <span className="mb-2 d-block" id="radio-title">
                   Layout Width
                 </span>
@@ -253,70 +220,6 @@ const RightSidebar = props => {
                 </React.Fragment>
               ) : null}
 
-              <FormGroup>
-                <span className="mb-2 d-block" id="radio-title">
-                  Preloader
-                </span>
-
-                <div className="form-check form-switch">
-                  <input
-                    type="checkbox"
-                    className="form-check-input checkbox"
-                    id="checkbox_1"
-                    checked={props.isPreloader}
-                    onChange={() => {
-                      props.changePreloader(!props.isPreloader)
-                    }}
-                  />
-
-                  <label className="form-check-label" htmlFor="checkbox_1">
-                    Preloader
-                  </label>
-                </div>
-              </FormGroup>
-
-              <h6 className="text-center">Choose Layouts</h6>
-
-              <div className="mb-2">
-                <Link
-                  to="#"
-                  target="_blank"
-                >
-                  <img
-                    src={layout1}
-                    className="img-fluid img-thumbnail"
-                    alt=""
-                  />
-                </Link>
-              </div>
-
-              <div className="mb-2">
-                <Link to="#" target="_blank">
-                  <img
-                    src={layout2}
-                    className="img-fluid img-thumbnail"
-                    alt=""
-                  />
-                </Link>
-              </div>
-
-              <div className="mb-2">
-                <Link to="#" target="_blank">
-                  <img
-                    src={layout3}
-                    className="img-fluid img-thumbnail"
-                    alt=""
-                  />
-                </Link>
-              </div>
-
-              <Link
-                to="#"
-                className="btn btn-primary btn-block mt-3"
-                target="_blank"
-              >
-                <i className="mdi mdi-cart ms-1" /> Purchase Now
-              </Link>
             </div>
           </div>
         </SimpleBar>
