@@ -7,6 +7,10 @@ Contact: themesbrand@gmail.com
 File: Main Css File
 */
 
+*:focus {
+    outline: none;
+}
+
 //Fonts
 @import "custom/fonts/fonts";
 

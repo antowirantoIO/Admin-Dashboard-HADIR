@@ -18,7 +18,7 @@ import Sidebar from "./Sidebar"
 import Footer from "./Footer"
 import Rightbar from "../CommonForBoth/Rightbar"
 //Import Breadcrumb
-import Breadcrumb from "../../components/Common/Breadcrumb"
+import Breadcrumb from "../Common/Breadcrumb"
 
 class Layout extends Component {
   constructor(props) {

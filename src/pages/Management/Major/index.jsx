@@ -1,22 +1,22 @@
 import React,{useEffect} from "react"
 import MetaTags from 'react-meta-tags';
 import { MDBDataTable } from "mdbreact"
-import { Row, Col, Card, CardBody, CardTitle } from "reactstrap"
+import { Row, Col, Card, CardBody, CardTitle, Button } from "reactstrap"
 
 import { connect } from "react-redux";
 
-//Import Action to copy breadcrumb items from local state to redux state
+
 import { setBreadcrumbItems } from "../../../store/actions";
 
-import ActionMenu from "./../../../components/Common/ActionMenu"
+import ActionMenu from "../../../components/Common/ActionMenu"
 
 import "../../../assets/scss/datatables.scss"
 
-const ManagementSubjects = (props) => {
+const ManagementMajor = (props) => {
   const breadcrumbItems = [
     { title: "HADIR", link: "#" },
     { title: "Management", link: "#" },
-    { title: "Mata Pelajaran", link: "#" },
+    { title: "Program dan Jurusan", link: "#" },
   ]
 
   useEffect(() => {
@@ -27,32 +27,26 @@ const ManagementSubjects = (props) => {
   const data = {
     columns: [
       {
-        label: "Kode Mapel",
-        field: "kode_mapel",
+        label: "ID",
+        field: "id",
         sort: "asc",
-        width: 100,
+        width: 150,
       },
       {
-        label: "Kode Guru",
-        field: "kode_guru",
-        sort: "asc",
-        width: 100,
-      },
-      {
-        label: "Nama Guru",
+        label: "Nama Program dan Jurusan",
         field: "name",
         sort: "asc",
         width: 100,
       },
       {
-        label: "Mata Pelajaran",
-        field: "mapel",
+        label: "Tingkat",
+        field: "level",
         sort: "asc",
-        width: 100,
+        width: 200,
       },
       {
-        label: "Kelas dan Jurusan",
-        field: "class",
+        label: "Jumlah Siswa",
+        field: "student",
         sort: "asc",
         width: 100,
       },
@@ -65,11 +59,10 @@ const ManagementSubjects = (props) => {
     ],
     rows: [
         {
-            kode_mapel: "MP001",
-            kode_guru: "G001",
-            name: "Devi Rodiana S.T",
-            mapel: "Pemrograman Berorientasi Objek",
-            class: "XII RPL ",
+            id: "KLS225",
+            name: "Rekayasa Perangkat Lunak",
+            level: "12",
+            student: "100",
             action: <ActionMenu />,
           },
     ],
@@ -79,21 +72,21 @@ const ManagementSubjects = (props) => {
     <React.Fragment>
       
         <MetaTags>
-          <title>Data Mata Pelajaran | HADIR</title>
+          <title>Data Program dan Jurusan | HADIR</title>
         </MetaTags>
 
           <Row>
             <Col className="col-12">
               <Card>
-                <CardBody>  
-                  <CardTitle className="h4">Data Mata Pelajaran </CardTitle>
+                <CardBody>
+                  <CardTitle className="h4">Data Program dan Jurusan </CardTitle>
 
-                  <div className="float-md-end">
-                    <button type="" className="btn btn-primary w-md">Import</button>
+                  <div className="float-md-end button-items">
+                    <Button type="button" color="primary" className="waves-effect waves-light">Import Excel</Button>{" "}
                   </div>
 
                   <p className="card-title-desc">
-                    Data Mata Pejaran Jangan Sampai Salah Yaaa!! :{" "}
+                    Disini Kamu Bisa Mengelola Program dan Jurusan yang ada di Instansimu :{" "}
                   </p>
 
                   <MDBDataTable responsive striped bordered data={data} />
@@ -106,4 +99,4 @@ const ManagementSubjects = (props) => {
   )
 }
 
-export default connect(null, { setBreadcrumbItems })(ManagementSubjects);
+export default connect(null, { setBreadcrumbItems })(ManagementMajor);

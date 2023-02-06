@@ -15,7 +15,8 @@ import ManagementEmploye from "../pages/Management/Employe/index";
 
 import InstitutionsManage from "../pages/Institutions/Manage/index";
 import InstitutionsProfile from "../pages/Institutions/Profile/index";
-import InstitutionsCalendar from "../pages/Institutions/Calendar/index";
+// import InstitutionsProfileProfile ../pages/Institutions/CalendarProfile"; // profile route nya cuman 1
+import InstitutionsCalendar from "../pages/Institutions/Calendar/Index";
 
 import ReportRecap from "../pages/Report/Recap/index";
 
@@ -32,6 +33,7 @@ const userRoutes = [
   // INSTANSI
   { path: "/institutions/manage", component: InstitutionsManage },
   { path: "/institutions/profile", component: InstitutionsProfile },
+  // { path: "/institutions/profile/profile", component: InstitutionsProfileProfile },
   { path: "/institutions/calendar", component: InstitutionsCalendar },
 
   // REPORT

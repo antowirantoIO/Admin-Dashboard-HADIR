@@ -1,22 +1,22 @@
 import React,{useEffect} from "react"
 import MetaTags from 'react-meta-tags';
 import { MDBDataTable } from "mdbreact"
-import { Row, Col, Card, CardBody, CardTitle } from "reactstrap"
+import { Row, Col, Card, CardBody, CardTitle, Button } from "reactstrap"
 
 import { connect } from "react-redux";
 
-//Import Action to copy breadcrumb items from local state to redux state
+
 import { setBreadcrumbItems } from "../../../store/actions";
 
-import ActionMenu from "./../../../components/Common/ActionMenu"
+import ActionMenu from "../../../components/Common/ActionMenu"
 
 import "../../../assets/scss/datatables.scss"
 
-const ManagementTeacher = (props) => {
+const ManagementStudent = (props) => {
   const breadcrumbItems = [
     { title: "HADIR", link: "#" },
     { title: "Management", link: "#" },
-    { title: "Data Guru", link: "#" },
+    { title: "Data Siswa", link: "#" },
   ]
 
   useEffect(() => {
@@ -27,40 +27,46 @@ const ManagementTeacher = (props) => {
   const data = {
     columns: [
       {
-        label: "Kode Guru",
-        field: "kode",
+        label: "NIS",
+        field: "nis",
         sort: "asc",
         width: 150,
       },
       {
-        label: "NIP",
-        field: "nip",
+        label: "NISN",
+        field: "nisn",
         sort: "asc",
         width: 270,
       },
       {
-        label: "Nama Guru",
+        label: "Nama Siswa",
         field: "name",
         sort: "asc",
         width: 200,
       },
       {
-        label: "Status Absensi",
-        field: "status",
+        label: "Kelas dan Jurusan",
+        field: "class",
         sort: "asc",
-        width: 200,
+        width: 150,
       },
       {
-        label: "Waktu Absensi",
-        field: "date",
+        label: "Status Absen",
+        field: "status",
         sort: "asc",
-        width: 200,
+        width: 100,
+      },
+      {
+        label: "Waktu Absen",
+        field: "time",
+        sort: "asc",
+        width: 100,
       },
       {
         label: "Perangkat",
         field: "device",
         sort: "asc",
-        width: 200,
+        width: 100,
       },
       {
         label: "Aksi",
@@ -70,16 +76,16 @@ const ManagementTeacher = (props) => {
       }
     ],
     rows: [
-        {
-            kode: "GRU523",
-            nip: "20214543",
-            name: "Bapak Ahtong",
-            status: "sudah absen",
-            date: "07:00 WIB",
-            device: "Iphone 17 promax",
-            action: <ActionMenu />,
-          },
-          
+      {
+        nis: "202110556",
+        nisn: "005322615",
+        name: "Kim Lanisa",
+        class: "12 Rekayasa Perangkat Lunak",
+        status: "Belum Absen",
+        time: "09:00 WIB",
+        device: "Samsung",
+        action: <ActionMenu />,
+      },
     ],
   }
 
@@ -87,21 +93,21 @@ const ManagementTeacher = (props) => {
     <React.Fragment>
       
         <MetaTags>
-          <title>Data Guru | HADIR</title>
+          <title>Data Siswa | HADIR</title>
         </MetaTags>
 
           <Row>
             <Col className="col-12">
               <Card>
                 <CardBody>
-                  <CardTitle className="h4">Data Guru </CardTitle>
-                  
-                  <div className="float-md-end">
-                    <button type="" className="btn btn-primary w-md">Import</button>
+                  <CardTitle className="h4">Data Siswa </CardTitle>
+
+                  <div className="float-md-end button-items">
+                    <Button type="button" color="primary" className="waves-effect waves-light">Import Excel</Button>{" "}
                   </div>
 
                   <p className="card-title-desc">
-                    Kelola data bapak/ibu gurunya dengan benar yaa  :{" "}
+                    Kelola juga data siswanya dengan benar yaa :{" "}
                   </p>
 
                   <MDBDataTable responsive striped bordered data={data} />
@@ -114,4 +120,4 @@ const ManagementTeacher = (props) => {
   )
 }
 
-export default connect(null, { setBreadcrumbItems })(ManagementTeacher);
+export default connect(null, { setBreadcrumbItems })(ManagementStudent);

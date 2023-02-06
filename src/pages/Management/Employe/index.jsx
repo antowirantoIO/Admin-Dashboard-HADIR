@@ -1,22 +1,22 @@
 import React,{useEffect} from "react"
 import MetaTags from 'react-meta-tags';
 import { MDBDataTable } from "mdbreact"
-import { Row, Col, Card, CardBody, CardTitle } from "reactstrap"
+import { Row, Col, Card, CardBody, CardTitle, Button } from "reactstrap"
 
 import { connect } from "react-redux";
 
-//Import Action to copy breadcrumb items from local state to redux state
+
 import { setBreadcrumbItems } from "../../../store/actions";
 
-import ActionMenu from "./../../../components/Common/ActionMenu"
+import ActionMenu from "../../../components/Common/ActionMenu"
 
 import "../../../assets/scss/datatables.scss"
 
-const ManagementStudent = (props) => {
+const ManagementEmploye = (props) => {
   const breadcrumbItems = [
     { title: "HADIR", link: "#" },
     { title: "Management", link: "#" },
-    { title: "Data Siswa", link: "#" },
+    { title: "Data Pegawai", link: "#" },
   ]
 
   useEffect(() => {
@@ -27,28 +27,22 @@ const ManagementStudent = (props) => {
   const data = {
     columns: [
       {
-        label: "NIS",
-        field: "nis",
+        label: "ID Pegawai",
+        field: "id",
         sort: "asc",
-        width: 150,
+        width: 100,
       },
       {
-        label: "NISN",
-        field: "nisn",
+        label: "Nama Pegawai",
+        field: "nama",
         sort: "asc",
-        width: 270,
+        width: 100,
       },
       {
-        label: "Nama Siswa",
-        field: "name",
+        label: "Tugas Pegawai",
+        field: "role",
         sort: "asc",
-        width: 200,
-      },
-      {
-        label: "Kelas dan Jurusan",
-        field: "class",
-        sort: "asc",
-        width: 150,
+        width: 100,
       },
       {
         label: "Status Absen",
@@ -63,12 +57,6 @@ const ManagementStudent = (props) => {
         width: 100,
       },
       {
-        label: "Perangkat",
-        field: "device",
-        sort: "asc",
-        width: 100,
-      },
-      {
         label: "Aksi",
         field: "action",
         sort: "asc",
@@ -76,16 +64,14 @@ const ManagementStudent = (props) => {
       }
     ],
     rows: [
-      {
-        nis: "202110556",
-        nisn: "005322615",
-        name: "Kim Lanisa",
-        class: "12 Rekayasa Perangkat Lunak",
-        status: "Belum Absen",
-        time: "09:00 WIB",
-        device: "Samsung",
-        action: <ActionMenu />,
-      },
+        {
+            id: "1",
+            nama: "Usman",
+            role: "Satpam",
+            status: "Belum Absen",
+            time: "06:00 WIB",
+            action: <ActionMenu />,
+        },
     ],
   }
 
@@ -93,21 +79,21 @@ const ManagementStudent = (props) => {
     <React.Fragment>
       
         <MetaTags>
-          <title>Data Siswa | HADIR</title>
+          <title>Data Pegawai | HADIR</title>
         </MetaTags>
 
           <Row>
             <Col className="col-12">
               <Card>
                 <CardBody>
-                  <CardTitle className="h4">Data Siswa </CardTitle>
+                  <CardTitle className="h4">Data Pegawai </CardTitle>
 
-                  <div className="float-md-end">
-                    <button type="" className="btn btn-primary w-md">Import</button>
+                  <div className="float-md-end button-items">
+                    <Button type="button" color="primary" className="waves-effect waves-light">Import Excel</Button>{" "}
                   </div>
 
                   <p className="card-title-desc">
-                    Kelola juga data siswanya dengan benar yaa :{" "}
+                    Disini Kamu Bisa Mengelola Data Pegawai yang ada di Instansimu :{" "}
                   </p>
 
                   <MDBDataTable responsive striped bordered data={data} />
@@ -120,4 +106,4 @@ const ManagementStudent = (props) => {
   )
 }
 
-export default connect(null, { setBreadcrumbItems })(ManagementStudent);
+export default connect(null, { setBreadcrumbItems })(ManagementEmploye);

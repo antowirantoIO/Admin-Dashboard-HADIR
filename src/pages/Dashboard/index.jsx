@@ -18,7 +18,7 @@ import YearlySales from "./yearly-sales";
 import LatestTransactions from "./latest-transactions";
 import LatestOrders from "./latest-orders";
 
-//Import Action to copy breadcrumb items from local state to redux state
+
 import { setBreadcrumbItems } from "../../store/actions";
 
 const Dashboard = (props) => {

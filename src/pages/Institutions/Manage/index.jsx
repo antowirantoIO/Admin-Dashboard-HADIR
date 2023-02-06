@@ -4,10 +4,10 @@ import { MDBDataTable } from "mdbreact"
 import { Row, Col, Card, CardBody, CardTitle } from "reactstrap"
 import { connect } from "react-redux";
 
-//Import Action to copy breadcrumb items from local state to redux state
+
 import { setBreadcrumbItems } from "../../../store/actions";
 
-import ActionMenu from "./../../../components/Common/ActionMenu"
+import ActionMenu from "../../../components/Common/ActionMenu"
 
 import "../../../assets/scss/datatables.scss"
 
@@ -109,7 +109,7 @@ const InstitutionsList = (props) => {
             <Col className="col-12">
               <Card>
                 <CardBody>
-                  <CardTitle className="h4">💼 • Kelola Data Instansi </CardTitle>
+                  <CardTitle className="h4">Kelola Data Instansi </CardTitle>
                   <p className="card-title-desc">
                     Kelola Data Instansi mu dengan benar okey {" "}
                   </p>

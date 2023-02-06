@@ -11,7 +11,7 @@ import { userRoutes, authRoutes } from "./routes/allRoutes"
 import Authmiddleware from "./routes/middleware/Authmiddleware"
 
 // layouts Format
-import VerticalLayout from "./components/VerticalLayout/"
+import VerticalLayout from "./components/VerticalLayout"
 import NonAuthLayout from "./components/NonAuthLayout"
 
 // Import scss
